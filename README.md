@@ -14,22 +14,22 @@ This Ansible project automates the installation and configuration of a web serve
 ## Directory Structure
 
 ```plaintext
-    ansible/
-    ├── inventory.ini
-    ├── playbooks/
-    │ ├── playbook_web.yaml
-    │ ├── playbook_update.yaml
-    ├── templates/
-    │ ├── index.html.j2
-    ├── roles/
-    │ ├── apache/
-    │ │ ├── tasks/
-    │ │ │ ├── main.yaml
-    │ │ ├── templates/
-    │ │ │ ├── index.html.j2
-    │ │ ├── handlers/
-    │ │ │ ├── main.yaml
-    └── README.md
+ansible/
+├── inventory.ini
+├── playbooks/
+│   ├── playbook_web.yaml
+│   ├── playbook_update.yaml
+├── templates/
+│   ├── index.html.j2
+├── roles/
+│   ├── apache/
+│   │   ├── tasks/
+│   │   │   ├── main.yaml
+│   │   ├── templates/
+│   │   │   ├── index.html.j2
+│   │   ├── handlers/
+│   │   │   ├── main.yaml
+└── README.md
 ```
 
 ## Setup Instructions
@@ -46,7 +46,18 @@ This Ansible project automates the installation and configuration of a web serve
     [myhosts]
     node1.inotech-pk.com ansible_user=ubuntu ansible_ssh_private_key_file=~/keys/ansible
     ```
-3. **Run Playbooks:**
+
+3. **Run Linter:**
+
+    ```sudo
+    sudo apt install -y ansible-lint
+    ```
+
+    ```bash
+    ansible-lint playbooks/playbook.yaml 
+    ```
+
+4. **Run Playbooks:**
 
     ```bash
     ansible-playbook -i inventory.ini playbooks/playbook_web.yaml
