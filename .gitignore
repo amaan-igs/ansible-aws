@@ -75,6 +75,7 @@ coverage.xml
 /test/develop
 # Environments
 .env
+.vscode
 .venv
 env/
 venv/
