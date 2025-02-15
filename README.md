@@ -1,3 +1,5 @@
+[![Ansible CI](https://github.com/amaan-igs/ansible-aws/actions/workflows/ci.yml/badge.svg)](https://github.com/amaan-igs/ansible-aws/actions/workflows/ci.yml)
+
 # Ansible Automation
 
 ## Overview

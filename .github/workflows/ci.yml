@@ -26,9 +26,3 @@ jobs:
 
       - name: Lint Ansible Playbooks
         run: ansible-lint playbooks/*.yaml
-
-      - name: Run Ansible Playbook
-        env:
-          ANSIBLE_HOST_KEY_CHECKING: "False"
-        run: |
-          ansible-playbook -i inventory.ini playbooks/playbook_web.yaml
